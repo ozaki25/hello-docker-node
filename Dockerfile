@@ -1,11 +1,12 @@
 #Node.js v12がインストールされたベースイメージ
-FROM node:12
+FROM node:14
 
 #アプリケーションディレクトリを作成
 WORKDIR /usr/src/app
 
 #アプリケーションの依存関係をインストール
 COPY package.json .
+COPY yarn.lock .
 RUN yarn
 
 #アプリケーションのソースを配置
