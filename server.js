@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   const message = `${time} Container Access!!!`;
   console.log(message);
 
-  fs.appendFileSync('output.log', message, error => {
+  fs.appendFileSync('log/output.log', message, error => {
     if (error) throw new Error(error);
     console.log('ファイルが正常に出力されました。');
   });
