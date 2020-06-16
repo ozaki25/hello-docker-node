@@ -3,6 +3,7 @@ FROM node:14
 
 #アプリケーションディレクトリを作成
 WORKDIR /usr/src/app
+RUN mkdir /usr/src/app/log
 
 #アプリケーションの依存関係をインストール
 COPY package.json .
